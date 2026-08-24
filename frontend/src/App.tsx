@@ -3,7 +3,7 @@ import './App.css'
 
 type Status = 'idle' | 'loading' | 'success' | 'error'
 
-const API_URL = import.meta.env.VITE_API_URL ?? 'http://localhost:8787'
+const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:8787'
 
 function App() {
   const [email, setEmail] = useState('')
