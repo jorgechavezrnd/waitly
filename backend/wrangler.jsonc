@@ -1,0 +1,18 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "waitly-api",
+  "main": "src/index.ts",
+  "compatibility_date": "2026-08-23",
+  "compatibility_flags": ["nodejs_compat"],
+  "observability": {
+    "enabled": true
+  }
+  // Cuando conectemos D1, agregar aquí algo como:
+  // "d1_databases": [
+  //   {
+  //     "binding": "DB",
+  //     "database_name": "waitly-db",
+  //     "database_id": "<database-id>"
+  //   }
+  // ]
+}
