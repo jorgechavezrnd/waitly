@@ -22,7 +22,13 @@ function App() {
         body: JSON.stringify({ email }),
       })
 
-      const data = (await response.json()) as { error?: string }
+      const raw = await response.text()
+      let data: { error?: string } = {}
+      try {
+        data = raw ? JSON.parse(raw) : {}
+      } catch {
+        throw new Error('El servidor respondió con un formato inesperado.')
+      }
 
       if (!response.ok) {
         throw new Error(data.error ?? 'Algo salió mal, intenta de nuevo.')

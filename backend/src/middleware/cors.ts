@@ -5,6 +5,7 @@ import { cors } from "hono/cors";
 const allowedOrigins = [
   "http://localhost:5173",
   "http://localhost:8788",
+  "https://waitly-frontend.jorgechavezrnd.workers.dev",
 ];
 
 export const corsMiddleware = cors({
